@@ -1,27 +1,20 @@
 'use client';
 
-interface todos {
-    title: string,
-    complete: boolean
-};
+import { useRecoilState } from "recoil";
+import { atomStateTodos } from "../atoms";
 
 export default function List() {
-    // state
-    let todos: todos[] = [
-        { title: 'todo1', complete: false },
-        { title: 'todo2', complete: false },
-        { title: 'todo3', complete: false }
-    ];
-    // functions
-    const completeTodo = (index: number) => {
-        const newTodos = [...todos];
-        newTodos[index].complete = !newTodos[index].complete;
-        todos = newTodos;
-    };
+    const [todos, setTodos] = useRecoilState(atomStateTodos);
+
     const removeTodo = (index: number) => {
         const newTodos = [...todos];
         newTodos.splice(index, 1);
-        todos = newTodos;
+        setTodos(newTodos);
+    };
+    const completeTodo = (index: number) => {
+        const newTodos = [...todos];
+        newTodos[index].complete = !newTodos[index].complete;
+        setTodos(newTodos);
     };
 
     return (
