@@ -3,8 +3,7 @@
 import { FormEvent, useState } from "react";
 import { useRecoilState } from "recoil";
 import { atomStateTodos } from "../atoms";
-import Link from "next/link";
-import { btnStyleAdd, formStyle, inputStyle } from "../styles";
+import { btnStyleAdd, inputStyle } from "../styles";
 
 export default function InputForm() {
     const [todos, setTodos] = useRecoilState(atomStateTodos);
@@ -21,7 +20,7 @@ export default function InputForm() {
     }
 
     return (
-        <form style={formStyle} onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit}>
             <input
                 style={inputStyle}
                 placeholder="タイトル"
