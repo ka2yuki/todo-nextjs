@@ -13,8 +13,15 @@ export default function List() {
         setTodos(newTodos);
     };
     const completeTodo = (index: number) => {
-        const newTodos = [...todos];
-        newTodos[index].complete = !newTodos[index].complete;
+        // const newTodos = [...todos];
+        // newTodos[index].complete = !newTodos[index].complete;
+        // setTodos(newTodos);
+        const newTodos = todos.map((todo, i) => {
+            if (i === index) {
+                return { ...todo, complete: !todo.complete };
+            }
+            return todo;
+        });
         setTodos(newTodos);
     };
 
