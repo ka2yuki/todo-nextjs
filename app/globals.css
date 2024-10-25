@@ -27,6 +27,13 @@ main {
   width: 100%;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  width: 100%;
+}
+
 table {
   width: 100%;
 }
