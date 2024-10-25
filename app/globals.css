@@ -34,33 +34,12 @@ form {
   width: 100%;
 }
 
-table {
+ul {
   width: 100%;
 }
 
-table tbody {
-  display: flex;
-  flex-direction: column;
-  gap: .5rem;
-  width: 100%;
-}
-
-table tr {
-  border: 1px solid;
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-}
-
-table tr th,
-table tr td {
-  padding: 5px;
-}
-
-table tr td {
-  display: flex;
-  gap: .5rem;
-  justify-content: right;
+ul li {
+  padding: .5rem;
 }
 
 @media screen and (min-width: 1000px) {

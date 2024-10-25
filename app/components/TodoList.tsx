@@ -19,27 +19,27 @@ export default function List() {
     };
 
     return (
-        <table>
-            <tbody>
-                {todos &&
-                    todos.map((todo, i) => (
-                        <tr key={i}>
-                            <th>{todo.title}</th>
-                            <td>{todo.text}</td>
-                            <td>
-                                <button style={btnStyle} onClick={() => completeTodo(i)}>
-                                    {todo.complete ? "完了" : "未完了"}
-                                </button>
-                                <button style={btnStyleDelete}
-                                    className="bg-slate-200"
-                                    onClick={() => removeTodo(i)}>
-                                    削除
-                                </button>
-                            </td>
-                        </tr>
-                    ))
-                }
-            </tbody>
-        </table>
+        <ul className="flex flex-col gap-3">
+            {todos &&
+                todos.map((todo, i) => (
+                    <li key={i} className="border border-current">
+                        <div className="flex flex-col items-start">
+                            <h3>{todo.complete ? "完了" : "未完了"} タイトル：{todo.title}</h3>
+                            <p>Description: {todo.text}</p>
+                        </div>
+                        <div className="flex justify-end gap-2">
+                            <button style={btnStyle} onClick={() => completeTodo(i)}>
+                                {todo.complete ? "完了" : "未完了"}
+                            </button>
+                            <button style={btnStyleDelete}
+                                className="bg-slate-200"
+                                onClick={() => removeTodo(i)}>
+                                削除
+                            </button>
+                        </div>
+                    </li>
+                ))
+            }
+        </ul>
     )
 }

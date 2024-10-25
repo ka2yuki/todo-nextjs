@@ -5,6 +5,12 @@ export const h1Style = {
     margin: "0px auto",
     fontSize: "50px",
 };
+export const listStyle = {
+    display: "flex",
+    flexDirection: "column",
+    gap: ".5rem",
+    width: "100%"
+}
 
 export const inputStyle = {
     padding: "10px",
