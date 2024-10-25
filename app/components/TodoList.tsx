@@ -2,6 +2,7 @@
 
 import { useRecoilState } from "recoil";
 import { atomStateTodos } from "../atoms";
+import { btnStyle, btnStyleDelete } from "../styles";
 
 export default function List() {
     const [todos, setTodos] = useRecoilState(atomStateTodos);
@@ -25,10 +26,12 @@ export default function List() {
                         <tr key={i}>
                             <th>{todo.title}</th>
                             <td>
-                                <button onClick={() => completeTodo(i)}>
+                                <button style={btnStyle} onClick={() => completeTodo(i)}>
                                     {todo.complete ? "完了" : "未完了"}
                                 </button>
-                                <button onClick={() => removeTodo(i)}>
+                                <button style={btnStyleDelete}
+                                    className="bg-slate-200"
+                                    onClick={() => removeTodo(i)}>
                                     削除
                                 </button>
                             </td>
