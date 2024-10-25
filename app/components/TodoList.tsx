@@ -25,6 +25,7 @@ export default function List() {
                     todos.map((todo, i) => (
                         <tr key={i}>
                             <th>{todo.title}</th>
+                            <td>{todo.text}</td>
                             <td>
                                 <button style={btnStyle} onClick={() => completeTodo(i)}>
                                     {todo.complete ? "完了" : "未完了"}

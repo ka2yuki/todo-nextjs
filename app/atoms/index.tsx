@@ -1,11 +1,13 @@
 'use client'
 
 import { atom } from "recoil";
-import { todos } from "../types";
+import { todoProps } from "../types";
 
-export const atomStateTodos = atom<todos[]>({
+export const atomStateTodos = atom<todoProps[]>({
     key: 'initialTodos',
     default: [{
-        title: 'todo1', complete: false
+        title: 'todo1',
+        text: '内容',
+        complete: false
     }]
 });

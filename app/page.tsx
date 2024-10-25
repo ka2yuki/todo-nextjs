@@ -7,7 +7,6 @@ import { h1Style } from "./styles";
 
 export default function Home() {
   // const pathname = document.location.pathname;
-  // const [todos, setTodos] = useRecoilState(atomStateTodos);
 
   return (
     <div className="grid grid-rows-[20px_1fr_20px] justify-items-center min-h-screen p-0 pb-20 sm:p-20 font-[family-name:var(--font-geist-sans)]">
@@ -16,11 +15,6 @@ export default function Home() {
         <RecoilRoot>
           <InputForm />
           <List />
-          {/* <List
-            todos={todos}
-            removeTodo={removeTodo}
-            completeTodo={completeTodo}
-          /> */}
           {/* {
             pathname == "list" ? <List /> : <></>
           } */}
