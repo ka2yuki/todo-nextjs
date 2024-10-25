@@ -1,8 +1,7 @@
 "use client"
 
-import Image from "next/image";
-import List from "./components/TodoList";
 import InputForm from "./components/TodoForm";
+import List from "./components/TodoList";
 import { RecoilRoot } from "recoil";
 
 export default function Home() {

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 import { useRecoilState } from "recoil";
 import { atomStateTodos } from "../atoms";
 
@@ -12,7 +12,7 @@ export default function InputForm() {
         const newTodos = [...todos, { title, complete: false }];
         setTodos(newTodos);
     }
-    const handleSubmit = (e: SubmitEvent): void => {
+    const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {
         e.preventDefault();
         addTodo(inputValue);
         setInputValue("");
