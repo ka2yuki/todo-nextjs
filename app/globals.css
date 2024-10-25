@@ -63,6 +63,13 @@ table tr td {
   justify-content: right;
 }
 
+@media screen and (min-width: 1000px) {
+
+  body,
+  main {
+    width: 70%;
+  }
+}
 
 @layer utilities {
   .text-balance {
