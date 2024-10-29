@@ -1,4 +1,4 @@
-ホスティングVercelのURL：https://todo-nextjs-20241025.vercel.app/
+URL：https://todo-nextjs-20241025.vercel.app/
 
 # 使用技術
 - プログラミング言語：TypeScript
