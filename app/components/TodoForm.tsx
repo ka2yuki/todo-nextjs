@@ -10,8 +10,8 @@ export default function InputForm() {
     const [inputValue, setInputValue] = useState("");
     const [textareaValue, setTextAreaValue] = useState("");
 
-    const addTodo = (title: string, text: string) => {
-        const newTodos = [...todos, { title, text, complete: false }];
+    const addTodo = (word: string, content: string) => {
+        const newTodos = [...todos, { word, content, ex: null, url: null, complete: false }];
         setTodos(newTodos);
     }
     const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {

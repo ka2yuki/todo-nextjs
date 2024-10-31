@@ -31,17 +31,15 @@ export default function List() {
                 todos.map((todo, i) => (
                     <li key={i} className="border border-current">
                         <div className="flex flex-col items-start">
-                            <h3>{todo.complete ? "完了" : "未完了"} タイトル：{todo.title}</h3>
-                            <p>Description: {todo.text}</p>
+                            <h3>単語：{todo.word}</h3>
+                            <p>意味： {todo.content}</p>
+                            <p>遭遇する時： {todo.ex}</p>
                         </div>
                         <div className="flex justify-end gap-2">
-                            <button style={btnStyle} onClick={() => completeTodo(i)}>
-                                {todo.complete ? "完了" : "未完了"}
-                            </button>
-                            <button style={btnStyleDelete}
+                            <button style={btnStyle}
                                 className="bg-slate-200"
                                 onClick={() => removeTodo(i)}>
-                                削除
+                                OK
                             </button>
                         </div>
                     </li>
