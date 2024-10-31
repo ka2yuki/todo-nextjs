@@ -1,5 +1,4 @@
 const mainColor = "rgb(90 215 90)";
-const grayColor = "gray";
 
 export const h1Style = {
     margin: "0px auto",
@@ -30,12 +29,6 @@ export const btnStyleAdd = {
     color: "white",
     width: "95%",
     margin: "0 auto"
-}
-export const btnStyleDelete = {
-    background: grayColor,
-    borderRadius: "5px",
-    padding: "10px",
-    color: "white"
 }
 export const listTitle = {
     color: mainColor,

@@ -2,7 +2,7 @@
 
 import { useRecoilState } from "recoil";
 import { atomStateTodos } from "../atoms";
-import { btnStyle, btnStyleDelete } from "../styles";
+import { btnStyle } from "../styles";
 
 export default function List() {
     const [todos, setTodos] = useRecoilState(atomStateTodos);
@@ -10,18 +10,6 @@ export default function List() {
     const removeTodo = (index: number) => {
         const newTodos = [...todos];
         newTodos.splice(index, 1);
-        setTodos(newTodos);
-    };
-    const completeTodo = (index: number) => {
-        // const newTodos = [...todos];
-        // newTodos[index].complete = !newTodos[index].complete;
-        // setTodos(newTodos);
-        const newTodos = todos.map((todo, i) => {
-            if (i === index) {
-                return { ...todo, complete: !todo.complete };
-            }
-            return todo;
-        });
         setTodos(newTodos);
     };
 
